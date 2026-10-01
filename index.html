@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Tutorial</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Fira+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Python Tutorial<span class="version-badge">v2</span></h1>
+        <p>Complete Tutorial + Labs + Interview Preparation</p>
+        <p class="subtitle">Master the fundamentals and prepare for your next role.</p>
+    </header>
+
+    <nav class="sticky-nav">
+        <div class="nav-container">
+            <div class="nav-item active" onclick="showModule('fundamentos')">Fundamentals</div>
+            <div class="nav-item" onclick="showModule('laboratorios')">Labs</div>
+            <div class="nav-item" onclick="showModule('ejercicios')">Exercises</div>
+            <div class="nav-item" onclick="showModule('entrevistas')">Interviews</div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- MODULE 1: FUNDAMENTALS -->
+        <div class="module active" id="fundamentos">
+            <!-- SECTION 1: INTRODUCTION -->
+            <section class="section">
+                <h2>1. Introduction to Python</h2>
+
+                <p>Python is one of the most popular and accessible programming languages in the world. With clear and readable syntax, Python is perfect for beginners but powerful enough for professionals.</p>
+
+                <div class="concept-card">
+                    <h4>Why Python?</h4>
+                    <p>✓ Simple and readable syntax<br>✓ Large and active community<br>✓ Widely used in AI, Data Science and Automation<br>✓ Excellent for learning programming</p>
+                </div>
+
+                <h3>Initial Setup</h3>
+
+                <div class="topics-grid">
+                    <div class="topic-item">
+                        <h4>Python</h4>
+                        <p>The Python interpreter that runs your code. Download it from python.org</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Visual Studio Code</h4>
+                        <p>Modern and lightweight text editor with excellent Python support</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Anaconda</h4>
+                        <p>Python distribution with preinstalled scientific tools</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Jupyter Notebook</h4>
+                        <p>Interactive interface for writing and executing Python code</p>
+                    </div>
+                </div>
+
+                <h3>Your First Program</h3>
+
+                <div class="example">
+                    <h5>Example 1: Hello World</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre>print("Hello, World!")</pre>
+                    </div>
+                    <p>The <span class="highlight">print()</span> function displays text on the screen. Everything between quotes is text (a string).</p>
+                </div>
+
+                <div class="example">
+                    <h5>Example 2: Hello World</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre>print("Welcome to Python")</pre>
+                    </div>
+                    <p>The <span class="highlight">print()</span> function displays text on the screen. Everything between quotes is text (a string).</p>
+                </div>
+
+            </section>
+
+            <!-- SECTION 2: FUNDAMENTAL DATA TYPES -->
+            <section class="section">
+                <h2>2. Fundamental Data Types</h2>
+
+                <p>In Python, each piece of data has a type. The most common data types are numbers, text strings, lists, dictionaries, and booleans.</p>
+
+                <div class="example">
+                    <h5>Example 3: Variable Definition</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre>
+book_name = "The Pragmatic Programmer"
+integer_number = 100
+decimal_number = 1.967857
+authorized = True
+selected = False
+                        </pre>
+                    </div>
+                    <p>To define variables we only specify the <span class="highlight">variable name</span> followed by the <span class="highlight">=</span> sign and then the <span class="highlight">value we want to assign.</span></p>
+                </div>
+
+                <h3>Numbers</h3>
+
+                <div class="concept-card">
+                    <h4>Integers and Decimals</h4>
+                    <p><span class="highlight">int</span>: Numbers without decimals (5, -10, 0)<br><span class="highlight">float</span>: Numbers with decimals (3.14, -2.5, 0.0)</p>
+                </div>
+
+                <div class="example">
+                    <h5>Example 4: Working with Numbers</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre>integer_number = 42
+decimal_number = 3.14159
+
+sum = integer_number + decimal_number
+print(f"Sum: {sum}")
+
+# Mathematical operations
+print(10 * 5)      # Multiplication: 50
+print(20 / 4)      # Division: 5.0
+print(2 ** 3)      # Power: 8
+print(17 % 5)      # Modulo (remainder): 2</pre>
+                    </div>
+                </div>
+
+                <h3>Text Strings (Strings)</h3>
+
+                <div class="concept-card">
+                    <h4>Working with Text</h4>
+                    <p>Strings are created with single ('') or double ("") quotes. You can use both interchangeably.</p>
+                </div>
+
+                <div class="example">
+                    <h5>Example 5: Text Strings</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre>name = "Python"
+message = 'It is an amazing language'
+
+# Concatenation (joining strings)
+result = name + " " + message
+print(result)
+
+# Useful methods
+print(name.lower())        # python
+print(name.upper())        # PYTHON
+print(len(name))           # 6 (length)</pre>
+                    </div>
+                </div>
+
+                <h3>Lists</h3>
+
+                <div class="concept-card">
+                    <h4>Ordered Collections</h4>
+                    <p>Lists store multiple values in an ordered container. They are mutable and can contain different data types.</p>
+                </div>
+
+                <div class="example">
+                    <h5>Example 6: Lists</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre>fruits = ["apple", "banana", "orange"]
+numbers = [1, 2, 3, 4, 5]
+
+# Access elements
+print(fruits[0])             # apple
+print(fruits[-1])            # orange (last element)
+
+# Add elements
+fruits.append("strawberry")
+
+# Iterate through a list
+for fruit in fruits:
+    print(f"Fruit: {fruit}")</pre>
+                    </div>
+                </div>
+
+                <h3>Dictionaries</h3>
+
+                <div class="concept-card">
+                    <h4>Key-Value Pairs</h4>
+                    <p>Dictionaries store data as key-value pairs. They are perfect for organizing related information.</p>
+                </div>
+
+                <div class="example">
+                    <h5>Example 7: Dictionaries</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre>person = {
+    "name": "Juan",
+    "age": 25,
+    "city": "Madrid"
+}
+
+# Access values
+print(person["name"])     # Juan
+
+# Add or modify
+person["age"] = 26
+person["country"] = "Spain"
+
+# Iterate
+for key, value in person.items():
+    print(f"{key}: {value}")</pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: CONTROL FLOW -->
+            <section class="section">
+                <h2>3. Control Flow: Decisions and Loops</h2>
+
+                <p>Control flow allows you to make decisions in your code and repeat actions. They are the foundation of any program.</p>
+
+                <h3>Conditionals: IF, ELIF, ELSE</h3>
+
+                <div class="concept-card">
+                    <h4>Making Decisions</h4>
+                    <p><span class="highlight">if</span>: If the condition is true, execute the code<br><span class="highlight">elif</span>: Another condition if the first is false<br><span class="highlight">else</span>: If no condition is true</p>
+                </div>
+
+                <div class="example">
+                    <h5>Example 8: Conditionals</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre>age = 20
+
+if age < 13:
+    print("You are a child")
+elif age < 18:
+    print("You are a teenager")
+else:
+    print("You are an adult")</pre>
+                    </div>
+                </div>
+
+                <h3>Loops: FOR and WHILE</h3>
+
+                <div class="concept-card">
+                    <h4>Repeat Code</h4>
+                    <p><span class="highlight">for</span>: Iterates over elements of a collection<br><span class="highlight">while</span>: Repeats while a condition is true</p>
+                </div>
+
+                <div class="example">
+                    <h5>Example 9: FOR Loop</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre>numbers = [1, 2, 3, 4, 5]
+
+for number in numbers:
+    print(f"Number: {number}")
+
+# Use range()
+for i in range(5):
+    print(f"Iteration {i}")</pre>
+                    </div>
+                </div>
+
+                <h3>List Comprehension</h3>
+
+                <div class="example">
+                    <h5>Example 10: List Comprehension</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre># Create list with squared numbers
+squares = [x**2 for x in range(10)]
+
+# With condition
+even = [x for x in range(10) if x % 2 == 0]
+
+# Transform list
+words = ["python", "is", "amazing"]
+uppercase = [p.upper() for p in words]</pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 4: FUNCTIONS -->
+            <section class="section">
+                <h2>4. Functions and Methods</h2>
+
+                <p>Functions are reusable blocks of code that perform specific tasks. They are essential for writing organized and efficient code.</p>
+
+                <h3>Define and Use Functions</h3>
+
+                <div class="concept-card">
+                    <h4>What is a Function?</h4>
+                    <p>A function is a set of instructions that perform a task. It is defined once and can be used multiple times.</p>
+                </div>
+
+                <div class="example">
+                    <h5>Example 11: Basic Function</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre>def greet():
+    print("Hello, welcome!")
+
+# Call the function
+greet()
+
+# Function with parameters
+def greet_person(name):
+    print(f"Hello, {name}!")
+
+greet_person("Juan")
+
+# Function with return
+def add(a, b):
+    return a + b
+
+total = add(5, 3)</pre>
+                    </div>
+                </div>
+
+                <h3>Lambda Functions</h3>
+
+                <div class="example">
+                    <h5>Example 12: Lambda Functions</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre># Lambda: Anonymous one-line function
+square = lambda x: x ** 2
+print(square(5))  # 25
+
+# Use with map()
+numbers = [1, 2, 3, 4, 5]
+squares = list(map(lambda x: x**2, numbers))</pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: OBJECT-ORIENTED PROGRAMMING -->
+            <section class="section">
+                <h2>5. Object-Oriented Programming (OOP)</h2>
+
+                <p>OOP is a programming approach that organizes code into objects. Objects contain data (attributes) and behavior (methods).</p>
+
+                <h3>Classes and Objects</h3>
+
+                <div class="concept-card">
+                    <h4>Key Concepts</h4>
+                    <p><span class="highlight">Class</span>: Template for creating objects<br><span class="highlight">Object</span>: Instance of a class<br><span class="highlight">Attributes</span>: Variables of the object<br><span class="highlight">Methods</span>: Functions of the object</p>
+                </div>
+
+                <div class="example">
+                    <h5>Example 13: Define a Class</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre>class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def greet(self):
+        print(f"Hello, I am {self.name}")
+
+# Create objects
+juan = Person("Juan", 25)
+juan.greet()</pre>
+                    </div>
+                </div>
+
+                <h3>Inheritance</h3>
+
+                <div class="concept-card">
+                    <h4>Share Behavior</h4>
+                    <p>Inheritance allows a class to inherit attributes and methods from another class.</p>
+                </div>
+
+                <div class="example">
+                    <h5>Example 14: Inheritance</h5>
+                    <div class="code-block">
+                        <button class="copy-btn">Copy</button>
+                        <pre>class Animal:
+    def __init__(self, name):
+        self.name = name
+
+class Dog(Animal):
+    def make_sound(self):
+        print(f"{self.name} barks: Woof!")
+
+dog = Dog("Rex")
+dog.make_sound()</pre>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Next Steps</h2>
+
+                <div class="topics-grid">
+                    <div class="topic-item">
+                        <h4>Practice Regularly</h4>
+                        <p>The best way to learn is by writing code. Create small projects every day.</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Labs</h4>
+                        <p>Complete the 9 progressive labs in the "Labs" section to solidify concepts.</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Solve Exercises</h4>
+                        <p>Practice with the interview exercises to improve your skills.</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Prepare</h4>
+                        <p>Use the interviews section to master key topics in Python and SQL.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- MODULE 2: LABS -->
+        <div class="module" id="laboratorios">
+            <section class="section">
+                <h2>The 9 Progressive Labs</h2>
+                <p>Each lab teaches you a key concept. Complete them in order to build a solid foundation.</p>
+
+                <div class="labs-grid">
+                    <div class="lab-card" onclick="showLabCode(this)" data-lab-title="Hello World" data-lab-code="# Lab 1: Hello World
+# Your first Python program
+
+# Print statements
+print('Hello, World!')
+print('Welcome to Python')
+
+# Comments: Use # for single-line comments
+# This is a comment and won't be executed
+
+# Multiple prints
+print('My name is Juan')
+print('I am learning Python')
+
+# Numbers and strings
+print(42)
+print(3.14)">
+                        <div class="lab-card-header">
+                            <div class="lab-number">1</div>
+                            <span class="difficulty basic">Basic ⭐</span>
+                        </div>
+                        <h4>Hello World</h4>
+                        <p>Your first Python program. Learn print() and basic comments.</p>
+                        <div style="margin-top: 12px; font-size: 0.85em; color: var(--text-secondary);">
+                            📁 src/labs/1/hello.py
+                        </div>
+                    </div>
+
+                    <div class="lab-card" onclick="showLabCode(this)" data-lab-title="Variables and Types" data-lab-code="# Lab 2: Variables and Types
+# Store and work with different data types
+
+# Strings
+name = 'Juan'
+city = 'Madrid'
+
+# Integers
+age = 25
+year = 2026
+
+# Floats
+height = 1.75
+weight = 70.5
+
+# Booleans
+is_student = True
+is_working = False
+
+# Lists
+fruits = ['apple', 'banana', 'orange']
+numbers = [1, 2, 3, 4, 5]
+
+# Dictionaries
+person = {
+    'name': 'Juan',
+    'age': 25,
+    'city': 'Madrid'
+}
+
+# Print values
+print(name)
+print(age)
+print(fruits)
+print(person)">
+                        <div class="lab-card-header">
+                            <div class="lab-number">2</div>
+                            <span class="difficulty basic">Basic ⭐</span>
+                        </div>
+                        <h4>Variables and Types</h4>
+                        <p>Store data in variables. Learn string, int, float, bool, lists and dictionaries.</p>
+                        <div style="margin-top: 12px; font-size: 0.85em; color: var(--text-secondary);">
+                            📁 src/labs/2/variables.py
+                        </div>
+                    </div>
+
+                    <div class="lab-card" onclick="showLabCode(this)" data-lab-title="Constants" data-lab-code="# Lab 3: Constants
+# Values that should NOT change during program execution
+
+# Constants (convention: ALL_CAPS)
+PI = 3.14159
+GRAVITY = 9.8
+MAX_USERS = 100
+COMPANY_NAME = 'Python Academy'
+
+# Using constants
+radius = 5
+area = PI * radius ** 2
+print(f'Area of circle: {area}')
+
+# Constant list
+COLORS = ['red', 'blue', 'green']
+print(f'Available colors: {COLORS}')
+
+# Good practice: Don't modify constants
+# MAX_USERS = 200  # WRONG!
+
+# Use constants to avoid magic numbers
+temperature = 25
+if temperature > MAX_USERS:  # This comparison doesn't make sense
+    print('Temperature too high')
+
+# Better:
+MAX_TEMPERATURE = 30
+if temperature > MAX_TEMPERATURE:
+    print('Temperature too high')">
+                        <div class="lab-card-header">
+                            <div class="lab-number">3</div>
+                            <span class="difficulty basic">Basic ⭐</span>
+                        </div>
+                        <h4>Constants</h4>
+                        <p>Learn values that should NOT change. Conventions and best practices.</p>
+                        <div style="margin-top: 12px; font-size: 0.85em; color: var(--text-secondary);">
+                            📁 src/labs/3/constantes.py
+                        </div>
+                    </div>
+
+                    <div class="lab-card" onclick="showLabCode(this)" data-lab-title="Conditionals" data-lab-code="# Lab 4: Conditionals
+# Make decisions with if, elif, and else
+
+# Simple if
+age = 20
+if age >= 18:
+    print('You are an adult')
+
+# if-else
+score = 45
+if score >= 50:
+    print('Pass')
+else:
+    print('Fail')
+
+# if-elif-else
+temperature = 15
+if temperature > 30:
+    print('Hot')
+elif temperature > 20:
+    print('Warm')
+elif temperature > 10:
+    print('Cool')
+else:
+    print('Cold')
+
+# Logical operators
+age = 25
+has_license = True
+if age >= 18 and has_license:
+    print('You can drive')
+
+# Using 'or'
+is_weekend = True
+is_holiday = False
+if is_weekend or is_holiday:
+    print('No work today')
+
+# Using 'not'
+is_raining = False
+if not is_raining:
+    print('Go outside')">
+                        <div class="lab-card-header">
+                            <div class="lab-number">4</div>
+                            <span class="difficulty intermediate">Intermediate ⭐⭐</span>
+                        </div>
+                        <h4>Conditionals</h4>
+                        <p>Make decisions with if/elif/else and match/case. Logical operators.</p>
+                        <div style="margin-top: 12px; font-size: 0.85em; color: var(--text-secondary);">
+                            📁 src/labs/4/condicionales.py
+                        </div>
+                    </div>
+
+                    <div class="lab-card" onclick="showLabCode(this)" data-lab-title="Functions" data-lab-code="# Lab 5: Functions
+# Create reusable code blocks
+
+# Simple function
+def greet():
+    print('Hello, Welcome!')
+
+greet()
+
+# Function with parameters
+def greet_person(name):
+    print(f'Hello, {name}!')
+
+greet_person('Juan')
+greet_person('Maria')
+
+# Function with return
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(f'Sum: {result}')
+
+# Function with multiple parameters and return
+def calculate_area(width, height):
+    return width * height
+
+area = calculate_area(10, 5)
+print(f'Area: {area}')
+
+# Function with default parameters
+def power(base, exponent=2):
+    return base ** exponent
+
+print(power(3))      # 9
+print(power(3, 3))   # 27
+
+# Function with multiple returns
+def get_max_min(numbers):
+    return max(numbers), min(numbers)
+
+max_val, min_val = get_max_min([1, 5, 3, 9, 2])
+print(f'Max: {max_val}, Min: {min_val}')">
+                        <div class="lab-card-header">
+                            <div class="lab-number">5</div>
+                            <span class="difficulty intermediate">Intermediate ⭐⭐</span>
+                        </div>
+                        <h4>Functions</h4>
+                        <p>Create reusable code. Parameters, return and recursion.</p>
+                        <div style="margin-top: 12px; font-size: 0.85em; color: var(--text-secondary);">
+                            📁 src/labs/5/funciones.py
+                        </div>
+                    </div>
+
+                    <div class="lab-card" onclick="showLabCode(this)" data-lab-title="Loops" data-lab-code="# Lab 6: Loops
+# Repeat actions with for and while
+
+# FOR loop - iterate over a list
+fruits = ['apple', 'banana', 'orange']
+for fruit in fruits:
+    print(f'Fruit: {fruit}')
+
+# FOR loop with range
+for i in range(5):
+    print(f'Number: {i}')
+
+# FOR loop with range (start, stop, step)
+for i in range(0, 10, 2):
+    print(i)
+
+# WHILE loop
+count = 0
+while count < 5:
+    print(f'Count: {count}')
+    count += 1
+
+# WHILE with break
+number = 0
+while True:
+    print(number)
+    if number == 3:
+        break
+    number += 1
+
+# FOR with continue (skip iteration)
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
+
+# Nested loops
+for i in range(3):
+    for j in range(3):
+        print(f'({i}, {j})')">
+                        <div class="lab-card-header">
+                            <div class="lab-number">6</div>
+                            <span class="difficulty intermediate">Intermediate ⭐⭐</span>
+                        </div>
+                        <h4>Loops</h4>
+                        <p>Repeat actions with for and while. Break, continue and nested loops.</p>
+                        <div style="margin-top: 12px; font-size: 0.85em; color: var(--text-secondary);">
+                            📁 src/labs/6/bucles.py
+                        </div>
+                    </div>
+
+                    <div class="lab-card" onclick="showLabCode(this)" data-lab-title="OOP Intro" data-lab-code="# Lab 7: Object-Oriented Programming Intro
+# Introduction to organizing code with OOP
+
+# Dictionary approach (not OOP)
+person_dict = {
+    'name': 'Juan',
+    'age': 25,
+    'email': 'juan@example.com'
+}
+
+# Function to work with dict
+def print_person(person):
+    print(f'Name: {person[\"name\"]}')
+    print(f'Age: {person[\"age\"]}')
+
+print_person(person_dict)
+
+# Class approach (OOP)
+class Person:
+    def __init__(self, name, age, email):
+        self.name = name
+        self.age = age
+        self.email = email
+
+    def print_info(self):
+        print(f'Name: {self.name}')
+        print(f'Age: {self.age}')
+        print(f'Email: {self.email}')
+
+# Create object
+juan = Person('Juan', 25, 'juan@example.com')
+juan.print_info()
+
+# Create another object
+maria = Person('Maria', 23, 'maria@example.com')
+maria.print_info()">
+                        <div class="lab-card-header">
+                            <div class="lab-number">7</div>
+                            <span class="difficulty advanced">Advanced ⭐⭐⭐</span>
+                        </div>
+                        <h4>OOP Intro</h4>
+                        <p>Group data and functions. Preparation for classes.</p>
+                        <div style="margin-top: 12px; font-size: 0.85em; color: var(--text-secondary);">
+                            📁 src/labs/7/poo.py
+                        </div>
+                    </div>
+
+                    <div class="lab-card" onclick="showLabCode(this)" data-lab-title="Classes" data-lab-code="# Lab 8: Classes
+# Create and use classes with attributes and methods
+
+class Animal:
+    def __init__(self, name, species):
+        self.name = name
+        self.species = species
+
+    def make_sound(self):
+        return f'{self.name} makes a sound'
+
+    def describe(self):
+        return f'{self.name} is a {self.species}'
+
+# Create objects
+dog = Animal('Rex', 'Dog')
+cat = Animal('Whiskers', 'Cat')
+
+print(dog.describe())
+print(dog.make_sound())
+
+print(cat.describe())
+print(cat.make_sound())
+
+# Class with more methods
+class Calculator:
+    def __init__(self):
+        self.result = 0
+
+    def add(self, a, b):
+        self.result = a + b
+        return self.result
+
+    def subtract(self, a, b):
+        self.result = a - b
+        return self.result
+
+    def multiply(self, a, b):
+        self.result = a * b
+        return self.result
+
+calc = Calculator()
+print(calc.add(5, 3))
+print(calc.multiply(4, 7))
+print(calc.subtract(10, 3))">
+                        <div class="lab-card-header">
+                            <div class="lab-number">8</div>
+                            <span class="difficulty advanced">Advanced ⭐⭐⭐</span>
+                        </div>
+                        <h4>Classes</h4>
+                        <p>Create real objects. Attributes, methods and __init__.</p>
+                        <div style="margin-top: 12px; font-size: 0.85em; color: var(--text-secondary);">
+                            📁 src/labs/8/class.py
+                        </div>
+                    </div>
+
+                    <div class="lab-card" onclick="showLabCode(this)" data-lab-title="Modules" data-lab-code="# Lab 9: Modules and Imports
+# Organize code in files and reuse with imports
+
+# Import built-in module
+import math
+
+print(f'Pi: {math.pi}')
+print(f'Square root of 16: {math.sqrt(16)}')
+
+# Import specific function
+from random import randint
+
+number = randint(1, 100)
+print(f'Random number: {number}')
+
+# Import with alias
+import statistics as stats
+
+numbers = [1, 2, 3, 4, 5]
+print(f'Mean: {stats.mean(numbers)}')
+print(f'Median: {stats.median(numbers)}')
+
+# Import multiple items
+from collections import Counter, defaultdict
+
+numbers_list = [1, 2, 2, 3, 3, 3]
+freq = Counter(numbers_list)
+print(freq)
+
+# Using a custom module (example)
+# You can create your own module:
+#
+# In file: my_math.py
+# def add(a, b):
+#     return a + b
+#
+# Then import: from my_math import add">
+                        <div class="lab-card-header">
+                            <div class="lab-number">9</div>
+                            <span class="difficulty advanced">Advanced ⭐⭐⭐</span>
+                        </div>
+                        <h4>Modules</h4>
+                        <p>Organize code in files. Imports and reuse.</p>
+                        <div style="margin-top: 12px; font-size: 0.85em; color: var(--text-secondary);">
+                            📁 src/labs/9/
+                        </div>
+                    </div>
+                </div>
+
+                <div class="concept-card">
+                    <h4>💡 How to Use the Labs</h4>
+                    <p><strong>Step 1:</strong> Read the theory in the "Fundamentals" section<br>
+                    <strong>Step 2:</strong> Locate the lab file in src/labs/<br>
+                    <strong>Step 3:</strong> Write the code following the exercises<br>
+                    <strong>Step 4:</strong> Run: <code>python src/labs/N/file.py</code><br>
+                    <strong>Step 5:</strong> Solve the proposed exercises</p>
+                </div>
+
+                <h3>Suggested Learning Plan</h3>
+                <div class="checklist">
+                    <h4>Week 1-2: Fundamentals</h4>
+                    <ul>
+                        <li>Complete Labs 1-3 (Hello World, Variables, Constants)</li>
+                        <li>Practice simple print and variable exercises</li>
+                        <li>Experiment in the interactive terminal (python)</li>
+                    </ul>
+                </div>
+
+                <div class="checklist">
+                    <h4>Week 3-4: Control Flow</h4>
+                    <ul>
+                        <li>Complete Labs 4-6 (Conditionals, Functions, Loops)</li>
+                        <li>Create small programs that combine these concepts</li>
+                        <li>Practice with "Easy" level interview exercises</li>
+                    </ul>
+                </div>
+
+                <div class="checklist">
+                    <h4>Week 5-6: Advanced Structures</h4>
+                    <ul>
+                        <li>Complete Labs 7-9 (OOP, Classes, Modules)</li>
+                        <li>Create a small project: Contact Manager or Calculator</li>
+                        <li>Practice with "Medium" level interview exercises</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- MODULE 3: EXERCISES -->
+        <div class="module" id="ejercicios">
+            <section class="section">
+                <h2>Practical Interview Exercises</h2>
+                <p>Practice these exercises to prepare. Try to solve them without looking at the solution first.</p>
+
+                <h3>🐍 PYTHON EXERCISES</h3>
+
+                <div class="exercise-card">
+                    <div class="exercise-header" onclick="toggleExercise(this)">
+                        <span class="exercise-title">1. Count Frequencies (EASY)</span>
+                        <span class="exercise-toggle">▼</span>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="exercise-body">
+                            <p><strong>Problem:</strong> Given a list of numbers, count how many times each one appears.</p>
+                            <pre>numbers = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]</pre>
+                            <p><strong>Expected:</strong> <code>{1: 1, 2: 2, 3: 3, 4: 4}</code></p>
+                            <div class="solution"><pre>from collections import Counter
+def count_frequencies(numbers):
+    return dict(Counter(numbers))</pre></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card">
+                    <div class="exercise-header" onclick="toggleExercise(this)">
+                        <span class="exercise-title">2. Reverse Dictionary (EASY)</span>
+                        <span class="exercise-toggle">▼</span>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="exercise-body">
+                            <p><strong>Problem:</strong> Reverse a dictionary (keys ↔ values).</p>
+                            <pre>original = {"a": 1, "b": 2, "c": 3}</pre>
+                            <p><strong>Expected:</strong> <code>{1: "a", 2: "b", 3: "c"}</code></p>
+                            <div class="solution"><pre>def reverse_dictionary(dictionary):
+    return {v: k for k, v in dictionary.items()}</pre></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card">
+                    <div class="exercise-header" onclick="toggleExercise(this)">
+                        <span class="exercise-title">3. Remove Duplicates Keeping Order (EASY)</span>
+                        <span class="exercise-toggle">▼</span>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="exercise-body">
+                            <p><strong>Problem:</strong> Remove duplicates but keep the original order.</p>
+                            <pre>numbers = [1, 2, 2, 3, 1, 4, 3, 5]</pre>
+                            <p><strong>Expected:</strong> <code>[1, 2, 3, 4, 5]</code> (order of first appearance)</p>
+                            <div class="solution"><pre>def remove_duplicates(lst):
+    return list(dict.fromkeys(lst))</pre></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card">
+                    <div class="exercise-header" onclick="toggleExercise(this)">
+                        <span class="exercise-title">4. Find Second Largest (EASY)</span>
+                        <span class="exercise-toggle">▼</span>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="exercise-body">
+                            <p><strong>Problem:</strong> Find the second largest number in a list.</p>
+                            <pre>numbers = [10, 20, 30, 40, 50]</pre>
+                            <p><strong>Expected:</strong> <code>40</code></p>
+                            <div class="solution"><pre>def second_largest(numbers):
+    sorted_list = sorted(set(numbers), reverse=True)
+    return sorted_list[1]</pre></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card">
+                    <div class="exercise-header" onclick="toggleExercise(this)">
+                        <span class="exercise-title">5. Group Even and Odd (MEDIUM)</span>
+                        <span class="exercise-toggle">▼</span>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="exercise-body">
+                            <p><strong>Problem:</strong> Group numbers into two lists: even and odd.</p>
+                            <pre>numbers = [1, 2, 3, 4, 5, 6, 7, 8]</pre>
+                            <p><strong>Expected:</strong> <code>{"even": [2, 4, 6, 8], "odd": [1, 3, 5, 7]}</code></p>
+                            <div class="solution"><pre>def group_even_odd(numbers):
+    return {
+        "even": [n for n in numbers if n % 2 == 0],
+        "odd": [n for n in numbers if n % 2 != 0]
+    }</pre></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card">
+                    <div class="exercise-header" onclick="toggleExercise(this)">
+                        <span class="exercise-title">6. Find Intersection (MEDIUM)</span>
+                        <span class="exercise-toggle">▼</span>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="exercise-body">
+                            <p><strong>Problem:</strong> Find common elements between two lists.</p>
+                            <pre>list1 = [1, 2, 3, 4, 5]
+list2 = [3, 4, 5, 6, 7]</pre>
+                            <p><strong>Expected:</strong> <code>[3, 4, 5]</code></p>
+                            <div class="solution"><pre>def intersection(list1, list2):
+    set2 = set(list2)
+    return [x for x in list1 if x in set2]</pre></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card">
+                    <div class="exercise-header" onclick="toggleExercise(this)">
+                        <span class="exercise-title">7. Sort List of Dictionaries (MEDIUM)</span>
+                        <span class="exercise-toggle">▼</span>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="exercise-body">
+                            <p><strong>Problem:</strong> Sort a list of people by age (descending).</p>
+                            <pre>people = [
+    {"name": "Juan", "age": 30},
+    {"name": "Maria", "age": 25},
+    {"name": "Pedro", "age": 35}
+]</pre>
+                            <p><strong>Expected:</strong> <code>[Pedro (35), Juan (30), Maria (25)]</code></p>
+                            <div class="solution"><pre>def sort_by_age(people):
+    return sorted(people, key=lambda p: p["age"], reverse=True)</pre></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exercise-card">
+                    <div class="exercise-header" onclick="toggleExercise(this)">
+                        <span class="exercise-title">8. Find Duplicates (MEDIUM)</span>
+                        <span class="exercise-toggle">▼</span>
+                    </div>
+                    <div class="exercise-content">
+                        <div class="exercise-body">
+                            <p><strong>Problem:</strong> Find numbers that appear more than once.</p>
+                            <pre>numbers = [1, 2, 2, 3, 3, 3, 4]</pre>
+                            <p><strong>Expected:</strong> <code>[2, 3]</code></p>
+                            <div class="solution"><pre>from collections import Counter
+def find_duplicates(numbers):
+    return [n for n, count in Counter(numbers).items() if count > 1]</pre></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- MODULE 4: INTERVIEWS -->
+        <div class="module" id="entrevistas">
+            <section class="section">
+                <h2>Interview Preparation</h2>
+                <p>Master the key topics for your technical interview. Practice Python and SQL.</p>
+
+                <div class="prep-tabs">
+                    <div class="prep-tab active" onclick="showPrepTab('python-prep')">Python</div>
+                    <div class="prep-tab" onclick="showPrepTab('sql-prep')">SQL</div>
+                    <div class="prep-tab" onclick="showPrepTab('tips-prep')">Tips</div>
+                </div>
+
+                <!-- PYTHON PREP -->
+                <div class="prep-content active" id="python-prep">
+                    <h3>🐍 Key Python Topics</h3>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">Lists, Sets, Dictionaries</h4>
+
+                    <div class="prep-topic">
+                        <h4>List Operations</h4>
+                        <p><strong>Append:</strong> Add to end | <strong>Pop:</strong> Remove by index | <strong>Remove:</strong> Remove by value</p>
+                        <p><strong>Slicing:</strong> <code>list[1:4]</code> | <strong>Reverse:</strong> <code>list[::-1]</code></p>
+                        <div class="code-block" style="margin-top: 10px;">
+                            <pre>lst = [1, 2, 3, 4, 5]
+lst.append(6)
+lst.pop(0)  # Remove first element
+sublist = lst[1:4]  # Elements from index 1 to 3</pre>
+                        </div>
+                    </div>
+
+                    <div class="prep-topic">
+                        <h4>Sets</h4>
+                        <p><strong>Main use:</strong> Remove duplicates, O(1) searches</p>
+                        <p><strong>Operations:</strong> Union | Intersection | Difference</p>
+                        <div class="code-block" style="margin-top: 10px;">
+                            <pre>my_set = {1, 2, 3, 4, 5}
+union = set1 | set2
+intersection = set1 & set2
+difference = set1 - set2</pre>
+                        </div>
+                    </div>
+
+                    <div class="prep-topic">
+                        <h4>Dictionaries</h4>
+                        <p><strong>Safe access:</strong> <code>dict.get("key", "default")</code></p>
+                        <p><strong>Iterate:</strong> <code>for key, value in dictionary.items()</code></p>
+                        <div class="code-block" style="margin-top: 10px;">
+                            <pre>person = {"name": "Juan", "age": 30}
+name = person.get("name", "N/A")
+# Dict comprehension
+squares = {x: x**2 for x in range(5)}</pre>
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">List Comprehension (VERY IMPORTANT)</h4>
+
+                    <div class="prep-topic">
+                        <h4>Basic Syntax</h4>
+                        <p><code>[expression for element in iterable if condition]</code></p>
+                        <div class="code-block" style="margin-top: 10px;">
+                            <pre># Simple
+squares = [x**2 for x in range(10)]
+
+# With condition
+even = [x for x in range(10) if x % 2 == 0]
+
+# With transformation
+words = ["python", "is", "amazing"]
+uppercase = [p.upper() for p in words]</pre>
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">Built-in Functions</h4>
+
+                    <div class="prep-topic">
+                        <h4>Essential Functions</h4>
+                        <p><strong>Search/Order:</strong> len() | min() | max() | sorted() | sum()</p>
+                        <p><strong>Transform:</strong> map() | filter() | zip()</p>
+                        <p><strong>Enumeration:</strong> enumerate() | range()</p>
+                        <div class="code-block" style="margin-top: 10px;">
+                            <pre>numbers = [1, 2, 3, 4, 5]
+
+# sorted with key
+sorted_list = sorted(numbers, reverse=True)
+
+# enumerate
+for i, num in enumerate(numbers):
+    print(f"{i}: {num}")</pre>
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">Common Practical Scripts</h4>
+
+                    <div class="prep-topic">
+                        <h4>Count Frequencies</h4>
+                        <div class="code-block">
+                            <pre>from collections import Counter
+numbers = [1, 2, 2, 3, 3, 3]
+frequencies = Counter(numbers)
+# {3: 3, 2: 2, 1: 1}</pre>
+                        </div>
+                    </div>
+
+                    <div class="prep-topic">
+                        <h4>Reverse Dictionary</h4>
+                        <div class="code-block">
+                            <pre>original = {"a": 1, "b": 2}
+reversed_dict = {v: k for k, v in original.items()}
+# {1: 'a', 2: 'b'}</pre>
+                        </div>
+                    </div>
+
+                    <div class="prep-topic">
+                        <h4>Group Data</h4>
+                        <div class="code-block">
+                            <pre>from collections import defaultdict
+grouped = defaultdict(list)
+for person in people:
+    grouped[person["age"]].append(person["name"])</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SQL PREP -->
+                <div class="prep-content" id="sql-prep">
+                    <h3>🗄️ Key SQL Topics</h3>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">Basic SELECT</h4>
+
+                    <div class="prep-topic">
+                        <h4>SELECT with Columns</h4>
+                        <div class="code-block">
+                            <pre>-- All columns
+SELECT * FROM users;
+
+-- Specific columns
+SELECT name, email FROM users;
+
+-- With alias
+SELECT name AS "User Name" FROM users;</pre>
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">WHERE - Filter</h4>
+
+                    <div class="prep-topic">
+                        <h4>Simple Conditions</h4>
+                        <div class="code-block">
+                            <pre>SELECT * FROM users WHERE age > 30;
+SELECT * FROM users WHERE city = 'Madrid';
+SELECT * FROM users WHERE age BETWEEN 25 AND 35;
+SELECT * FROM users WHERE city IN ('Madrid', 'Barcelona');</pre>
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">Aggregate Functions</h4>
+
+                    <div class="prep-topic">
+                        <h4>COUNT, SUM, AVG, MIN, MAX</h4>
+                        <div class="code-block">
+                            <pre>SELECT COUNT(*) AS total FROM users;
+SELECT SUM(salary) FROM employees;
+SELECT AVG(age) FROM users;
+SELECT MAX(salary) FROM employees;</pre>
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">GROUP BY</h4>
+
+                    <div class="prep-topic">
+                        <h4>Group and Count</h4>
+                        <div class="code-block">
+                            <pre>SELECT city, COUNT(*) AS total
+FROM users
+GROUP BY city;
+
+-- With HAVING
+SELECT city, COUNT(*) AS total
+FROM users
+GROUP BY city
+HAVING COUNT(*) > 1;</pre>
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">JOINs - Combine Tables</h4>
+
+                    <div class="prep-topic">
+                        <h4>INNER JOIN</h4>
+                        <p>Combines only records that match in both tables.</p>
+                        <div class="code-block">
+                            <pre>SELECT u.name, p.title
+FROM users u
+INNER JOIN posts p ON u.id = p.user_id;</pre>
+                        </div>
+                    </div>
+
+                    <div class="prep-topic">
+                        <h4>LEFT JOIN</h4>
+                        <p>All records from the left table, even if there's no match.</p>
+                        <div class="code-block">
+                            <pre>SELECT u.name, COUNT(p.id) AS posts
+FROM users u
+LEFT JOIN posts p ON u.id = p.user_id
+GROUP BY u.id;</pre>
+                        </div>
+                    </div>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">Difference: WHERE vs HAVING</h4>
+
+                    <div class="concept-card">
+                        <h4>WHERE vs HAVING</h4>
+                        <p><strong>WHERE:</strong> Filters BEFORE grouping (applies to rows)<br><strong>HAVING:</strong> Filters AFTER grouping (applies to groups)</p>
+                        <div class="code-block" style="margin-top: 10px;">
+                            <pre>-- WHERE: filter before
+SELECT city, COUNT(*) FROM users
+WHERE age > 25
+GROUP BY city;
+
+-- HAVING: filter after
+SELECT city, COUNT(*) FROM users
+GROUP BY city
+HAVING COUNT(*) > 1;</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TIPS -->
+                <div class="prep-content" id="tips-prep">
+                    <h3>🎯 Interview Tips</h3>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">Python</h4>
+
+                    <div class="prep-topic">
+                        <h4>1. List Comprehension is Your Friend</h4>
+                        <p>Use it whenever you can. It's Pythonic, readable and efficient.</p>
+                    </div>
+
+                    <div class="prep-topic">
+                        <h4>2. Know the Built-in Functions</h4>
+                        <p>len(), sum(), min(), max(), sorted(), enumerate(), zip(), map(), filter()</p>
+                    </div>
+
+                    <div class="prep-topic">
+                        <h4>3. Dictionaries vs Sets</h4>
+                        <p><strong>Sets:</strong> To remove duplicates, O(1) search<br><strong>Dictionaries:</strong> For key-value mappings, O(1)</p>
+                    </div>
+
+                    <div class="prep-topic">
+                        <h4>4. Write Clean Code</h4>
+                        <p>✓ Clear variable names<br>✓ Don't do everything in one line<br>✓ Explain your logic verbally</p>
+                    </div>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">SQL</h4>
+
+                    <div class="prep-topic">
+                        <h4>1. Read the Question Twice</h4>
+                        <p>Make sure you understand what is being asked before writing.</p>
+                    </div>
+
+                    <div class="prep-topic">
+                        <h4>2. Identify the Main Table</h4>
+                        <p>Which table is the starting point? Do you need a JOIN?</p>
+                    </div>
+
+                    <div class="prep-topic">
+                        <h4>3. Understand JOINs</h4>
+                        <p><strong>INNER:</strong> Only matches<br><strong>LEFT:</strong> All from left<br><strong>RIGHT:</strong> All from right</p>
+                    </div>
+
+                    <div class="prep-topic">
+                        <h4>4. Practice on SQLZoo.net</h4>
+                        <p>Excellent interactive platform for SQL. 30 min/day = great improvement.</p>
+                    </div>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">General</h4>
+
+                    <div class="checklist">
+                        <h4>Interview Checklist</h4>
+                        <ul>
+                            <li>Write pseudocode first if you're unsure</li>
+                            <li>Don't try to be "clever", clean code is better</li>
+                            <li>Ask if you don't understand the question</li>
+                            <li>Test your code with examples</li>
+                            <li>Ask about edge cases (empty list, duplicate values, etc)</li>
+                            <li>Explain your solution out loud as you write</li>
+                        </ul>
+                    </div>
+
+                    <h4 style="margin-top: 30px; color: var(--primary);">Study Plan (1 Week)</h4>
+
+                    <div class="checklist">
+                        <h4>Day 1-2: Review Fundamentals</h4>
+                        <ul>
+                            <li>Lists, sets, dictionaries</li>
+                            <li>List comprehension</li>
+                            <li>Built-in functions</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist">
+                        <h4>Day 3-4: Practical Scripts</h4>
+                        <ul>
+                            <li>Count frequencies</li>
+                            <li>Reverse dictionaries</li>
+                            <li>Find duplicates</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist">
+                        <h4>Day 5-6: SQL</h4>
+                        <ul>
+                            <li>SELECT, WHERE, ORDER BY</li>
+                            <li>GROUP BY, HAVING, aggregation</li>
+                            <li>INNER JOIN, LEFT JOIN</li>
+                        </ul>
+                    </div>
+
+                    <div class="checklist">
+                        <h4>Day 7: Integrated Practice</h4>
+                        <ul>
+                            <li>Solve 5-10 varied exercises</li>
+                            <li>Time yourself (interview simulation)</li>
+                            <li>Review this document + tips</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>Recommended Resources</h2>
+
+                <div class="topics-grid">
+                    <div class="topic-item">
+                        <h4>Python</h4>
+                        <p>Real Python (realpython.com)<br>LeetCode (leetcode.com)<br>Python official docs</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>SQL</h4>
+                        <p>SQLZoo (sqlzoo.net)<br>Mode Analytics<br>W3Schools SQL</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>General Practice</h4>
+                        <p>HackerRank<br>CodeWars<br>InterviewBit</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Interviews</h4>
+                        <p>Cracking the Coding Interview<br>System Design Interview<br>Tech Coaching</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Lab Code Modal -->
+    <div id="labModal" class="lab-modal">
+        <div class="lab-modal-content">
+            <div class="lab-modal-header">
+                <h3 id="labModalTitle">Lab Code</h3>
+                <button class="lab-modal-close" onclick="closeLabCode()">&times;</button>
+            </div>
+            <div class="lab-modal-body">
+                <div class="code-block">
+                    <button class="copy-btn" onclick="copyLabCode()">Copy</button>
+                    <pre id="labModalCode"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Python Tutorial Basic, Intermediate and Advanced + Interview Preparation</p>
+        <p>Enhanced version with 9 Labs, Interview Exercises and Interview Preparation</p>
+        <a href="https://jcgl.github.io/jcgl-site/" target="_blank" style="color:white;">Juan Carlos Garcia Luna</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"5070e21320304a1ba2b0a42ce9682840","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

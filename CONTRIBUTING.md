@@ -350,7 +350,7 @@ Use GitHub Issues with:
 
 - Check existing issues/PRs
 - Create a new discussion
-- Email: juan.luna@3pillarglobal.com
+- Email: juancarlosgarcialuna@gmail.com
 
 ---
 

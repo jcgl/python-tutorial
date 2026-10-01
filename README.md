@@ -4,7 +4,7 @@ A comprehensive and interactive Python learning platform designed for beginners 
 
 ![Version](https://img.shields.io/badge/version-2.0-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-green)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/badge/license-CC%20BY--NC--SA-blue)
 
 ## 📚 Table of Contents
 
@@ -216,7 +216,7 @@ python hello.py
 name = "Juan"
 
 # Integer
-age = 25
+age = 42
 
 # Float
 height = 1.75
@@ -381,15 +381,35 @@ Contributions are welcome! Please feel free to:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)** License.
+
+### What This Means:
+
+✅ **You CAN:**
+- Use this course for personal learning
+- Share it with students or professionals
+- Create adapted versions for educational purposes
+- Modify and improve the materials
+- **All for non-commercial use only**
+
+❌ **You CANNOT:**
+- Sell this course or any part of it
+- Use it as a paid educational service without permission
+- Incorporate it into a commercial product
+- Charge money for access to these materials
+
+💼 **For Commercial Use:**
+If you wish to use this course commercially (sell it, use in a paid service, etc.), you must contact the author for permission:
+- **Email:** juan.luna@3pillarglobal.com
+
+See the [LICENSE](LICENSE) file for complete details.
 
 ## 👨‍💻 Author
 
 **Juan Carlos Garcia Luna**
 
-- [GitHub](https://github.com/yourusername)
 - [Website](https://jcgl.github.io/jcgl-site/)
-- Email: juan.luna@3pillarglobal.com
+- Email: juancarlosgarcialuna@gmail.com
 
 ## 🙏 Acknowledgments
 
@@ -397,28 +417,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Thanks to the Python community
 - Special thanks to all learners who use this course
 
-## ❓ FAQ
-
-### Q: How long does it take to complete the course?
-**A:** Approximately 6-8 weeks at 3-4 hours per week, depending on your pace.
-
-### Q: Can I use this on mobile?
-**A:** Yes! The interface is responsive and works on all devices.
-
-### Q: Do I need to buy anything?
-**A:** No! Everything is free. Just download Python and use your browser.
-
-### Q: How often is the course updated?
-**A:** Regularly. Subscribe for updates or check back frequently.
-
-### Q: Can I use this for teaching?
-**A:** Yes! Feel free to use it in your classroom. Attribution appreciated.
-
 ## 📧 Support
 
 Have questions or found a bug?
 - Open an issue on GitHub
-- Contact: juan.luna@3pillarglobal.com
+- Contact: juancarlosgarcialuna@gmail.com
 - Check the course for tips and best practices
 
 ---
